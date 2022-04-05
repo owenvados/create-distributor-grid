@@ -17,35 +17,63 @@
     margin-top: 50px;
     margin-bottom: 50px;
 }
-
-
-/* CARD */
-.c-magazine__card {}
-
-.c-magazine__card-footer{
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
-align-items: center;
+/*---------- HIDDENS----------- */
+.hidden{
+    visibility: hidden;
 }
-.c-magazine__card-footer-title{
+@media (min-width:768px){
+    .hidden{  visibility: visible;}
+}
+
+@media (min-width:768px){
+    .hidden-reverse{  visibility: hidden;}
+  
+}
+/* CARD */
+
+/* -------GRID CARD footer----------- */
+.c-magazine__card-footer{
+display: grid;
+grid-template-columns: 1fr 0.3fr 1fr;
+grid-template-rows: repeat(2, 0.3fr);
+}
+/* @media (min-width:768px){
+    .c-magazine__card-footer{
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+    }
+} */
+.c-magazine__card-footer--title{
+margin: auto;
+font-size: 15px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+}
+.c-magazine__card-footer--subtitle{
+    
+    grid-column-start: 1;
+    grid-column-end: 4;
     padding-bottom:10px;
     padding-top:20px;
 }
 .c-magazine__card-footer--sm{
+
     text-align: end;
+    grid-column-start: 3;
+    grid-column-end: 4;
 }
-/* .c-magazine__card-footer .u-hidden{
-    overflow:hidden ;
-} */
+
 .c-magazine__card-footer .mobile {
     text-decoration: underline;
+    font-weight: 900;
 padding-top:20px;
     padding-bottom:10px;
 }
 /* FIN CARD 1 */
 .c-magazine__list {
-    border: 1px solid red;
+
     width: 100%;
     display: grid;
    
@@ -53,22 +81,22 @@ padding-top:20px;
 @media (min-width:768px) {
     .c-magazine__list {
         width: 100%;
-        border: 1px solid red;
+   
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 24px;
     }
 
 }
-.c-magazine__list li {
-    border: 1px solid green;
-}
+/* .c-magazine__list li {
+
+} */
 
 
 /* ------------------------ ITEM -> LI ------------------------------*/
-.c-magazine__item {
+/* .c-magazine__item {
     border: 2px solid red;
-}
+} */
 @media (min-width:768px) {
 .c-magazine__item--double {
     grid-area: span 1 / span 2;
