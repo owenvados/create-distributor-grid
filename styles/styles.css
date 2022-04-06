@@ -31,20 +31,19 @@
 } */
 /* CARD */
 
-/* -------GRID CARD footer----------- */
+/* -------FLEX CARD footer----------- */
 .c-magazine__card-footer{
 /* background-color: aquamarine; */
 display: flex;
 flex-direction: row;
 justify-content: space-between;
-
 flex-wrap: wrap;
 }
 
 .c-magazine__card-footer--title{
 width: 70%;
 font-size: 15px;
-padding-bottom: 16px;
+
 /* border: 2px solid rgb(255, 255, 0); */
 
 }
@@ -61,7 +60,27 @@ text-decoration: underline;
 font-weight: 900;
 
 }
+@media (min-width:768px) {
+    .c-magazine__card-footer{
+        flex-direction: column;
+    }
+    .c-magazine__card-footer--title{
+        width: 70%;
+        
+        padding-bottom: 8px;
+    }
+    .c-magazine__card-footer--sm{
+        order: 2;
+        text-decoration-line: none;
+        text-transform: none;
+        padding-top: 8px;
+    }
+    .c-magazine__item{
 
+        margin-bottom: 16px;
+    }
+
+}
 
 /* FIN CARD 1 */
 .c-magazine__list {
@@ -73,6 +92,8 @@ font-weight: 900;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 14px;
+        padding-left: 8px;
+        padding-right: 8px;
     }
 
 }
@@ -93,9 +114,12 @@ font-weight: 900;
 
 /* ------------------------ CARD ------------------------------*/
 .c-magazine__item{
-      padding: 24px;
+      padding: 24px 8px 24px 8px;
 }
-
+@media (min-width:768px) {
+    .c-magazine__item{
+        padding: 0px}
+}
 .c-magazine__card-image {
     position: relative;
     width: 100%;
