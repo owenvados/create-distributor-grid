@@ -17,6 +17,9 @@
     margin-top: 50px;
     margin-bottom: 50px;
 }
+.c-magazine__text--title{
+    padding: 16px;
+}
 /*---------- HIDDENS PROVISIONALES, MANTENGO LA CLASE "u-hiddem@sm-down" AL LADO----------- */
 /* .hidden{
     visibility: hidden;
