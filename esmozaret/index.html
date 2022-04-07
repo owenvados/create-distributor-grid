@@ -1,0 +1,520 @@
+{*** STYLES ***}
+<style>
+ .c-landing {
+  font-size: 10px;
+ }
+
+ .c-landing__header {
+  display: flex;
+  position: relative;
+ }
+
+ .c-landing__header-img {
+  width: 100%;
+ }
+
+ .c-landing__header-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: #fff;
+ }
+
+ .c-landing__header-title {
+  font-size: 54px;
+  font-style: italic;
+  line-height: 1.4;
+  font-weight: 300;
+  letter-spacing: -1px;
+  padding-top: 24px;
+ }
+ .c-landing__header-subtitle {
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 200;
+  max-width: 65%;
+  text-align: center;
+ }
+
+ .c-landing__content {
+  width: 100%;
+  margin: 80px 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ .c-landing__content--no-margin {
+  margin: 0;
+ }
+
+ .c-landing__content--no-align {
+  align-items: initial;
+ }
+
+ .c-landing__content--no-align > .c-landing__block {
+  max-width: 80%;
+ }
+
+ .c-landing__content--no-align > .c-landing__block:last-child {
+  align-self: flex-end;
+ }
+
+ .c-landing__content--two-columns {
+  flex-direction: row;
+  gap: 12px;
+  align-items: flex-start;
+ }
+
+ .c-landing__content--orange {
+  background-color: #f8a95a;
+ }
+
+ .c-landing__content--pepper {
+  position: relative;
+  margin-bottom: 80px;
+ }
+
+ .c-landing__content--pepper img {
+  width: 40%;
+  position: absolute;
+  top: -180px;
+  left: 40px;
+ }
+
+ .c-landing__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+ .c-landing__block--only-text {
+  width: 100%;
+  margin: 60px 0;
+ }
+
+ .c-landing__block--orange img {
+  margin: 32px 0;
+  max-width: 50%;
+ }
+
+ .c-landing__block--only-text p {
+  font-size: 21px;
+  text-align: center;
+  line-height: 1.2;
+  max-width: 55%;
+  color: #f8a95a;
+  margin: 0 auto;
+  font-weight: 300;
+ }
+
+ .c-landing__block-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: #f8a95a;
+  padding: 6%;
+ }
+
+ .c-landing__block-text--force-bottom {
+  margin-bottom: -100px;
+ }
+
+ .c-landing__block-text--light {
+  color: #fff;
+ }
+
+ .c-landing__block-img--force-top {
+  margin-top: -40px;
+ }
+
+ .c-landing__block-img--margin {
+  margin: 0 auto;
+  width: 80%;
+ }
+
+ .c-landing__block-img img {
+  max-width: 80%;
+  margin: 0 auto;
+ }
+
+ .c-landing__block-text p {
+  font-size: 18px;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  text-align: center;
+ }
+
+ .c-landing__block-text img {
+  width: 60%;
+ }
+
+ .c-landing__img-text {
+  width: 100%;
+  padding: 8px 12px 16px 0;
+  font-size: 16px;
+  color: #4689aa;
+  font-weight: 300;
+  letter-spacing: -1px;
+  line-height: 1.1;
+
+  display: flex;
+  align-items: center;
+ }
+
+ .c-landing__img-text--right {
+  justify-content: flex-end;
+ }
+
+ /* ------------- FOOTER -------------- */
+ .c-landing__footer {
+  background: #fff7f2;
+  width: 100%;
+  padding: 8% 10%;
+ }
+
+ .c-landing__footer-title {
+  color: #4689aa;
+  font-size: 21px;
+  line-height: 1;
+  letter-spacing: -0.5px;
+  text-align: center;
+  padding-bottom: 32px;
+ }
+
+ .c-landing__footer-links {
+  background: #fff7f2;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+ }
+
+ .c-landing__footer-link {
+  width: 100%;
+
+  font-size: 15px;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  font-weight: 300;
+ }
+
+ .c-landing__footer-link-title {
+  color: #4689aa;
+  font-weight: 400;
+  line-height: 1.5;
+
+ }
+
+ .c-landing__footer-link-subtitle {
+  width: 80%;
+  color: #f8a95a;
+  font-size: 12px;
+ }
+
+ .c-landing__arrow {
+  width: 24px;
+  height: 24px;
+  margin-left: 4px;
+  transform: rotate(-45deg);
+ }
+
+ @media (min-width: 768px) {
+  .c-landing__header-text {
+   justify-content: center;
+   align-items: center;
+  }
+  .c-landing__footer-arrow{
+   width:16px;
+   height:16px;
+   color: #4689aa;
+   opacity: 0;
+  }
+  .c-landing__footer-link:hover .c-landing__footer-arrow{
+   opacity: 1;
+  }
+  .c-landing__header-title {
+   font-size: 5.2vw;
+   letter-spacing: -2px;
+  }
+
+  .c-landing__header-title {
+   font-size: 5.2vw;
+   letter-spacing: -2px;
+  }
+
+  .c-landing__content {
+   max-width: 1200px;
+   margin: 80px auto;
+  }
+
+  .c-landing__content--no-align {
+   align-items: flex-start;
+   justify-content: center;
+   gap: 24px;
+  }
+
+  .c-landing__content--no-align > .c-landing__block:last-child {
+   align-self: initial;
+  }
+
+  .c-landing__content--orange .c-landing__block {
+   flex-direction: row;
+  }
+
+  .c-landing__content--orange .c-landing__block-text {
+   order: -1;
+  }
+
+  .c-landing__content--orange .c-landing__block-text img {
+   width: 80%;
+  }
+
+  .c-landing__content--fullwidth {
+   max-width: 100%;
+  }
+
+  .c-landing__content--pepper img {
+   width: 40%;
+   max-width: 260px;
+   position: absolute;
+   top: -300px;
+   left: 200px;
+  }
+
+  .c-landing__block-text p {
+   font-size: 24px;
+   line-height: 1.2;
+   letter-spacing: -1px;
+   padding: 12px 24px;
+  }
+
+  .c-landing__block--only-text p {
+   font-size: 36px;
+   max-width: 380px;
+  }
+
+  /* ------------- FOOTER -------------- */
+  .c-landing__footer {
+   padding: 4%;
+  }
+
+  .c-landing__footer-content {
+   max-width: 900px;
+   margin: 0 auto;
+  }
+
+  .c-landing__footer-title {
+   font-size: 32px;
+   letter-spacing: -1px;
+  }
+
+  .c-landing__footer-links {
+   gap: 42px;
+  }
+
+  .c-landing__footer-link-title {
+   font-size: 16px;
+   margin:0px;
+  }
+
+  .c-landing__footer-link-subtitle {
+   font-size: 14px;
+  }
+ }
+ .c-landing__footer-arrow{
+  width:16px;
+  height:16px;
+  color: #4689aa;
+  opacity: 0;
+  transition: 0.05s;
+  transform: none;
+ }
+ .c-landing__footer-container{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #f8a95a;
+  margin-bottom: 10px;
+ }
+</style>
+{*** TEMPLATE ***}
+<div class="c-landing u-fullwidth"><header class="c-landing__header"><picture class="c-landing__header-img u-hidden@sm--down"> <img class="lazyload" data-sizes="auto" data-src="{core_getimage filename='esmorzaret-01.png' ambit='editorial/esmorzaret/main'}" /> </picture> <picture class="c-landing__header-img"> <img class="lazyload" data-sizes="auto" data-src="{core_getimage filename='esmorzaret-02.png' ambit='editorial/esmorzaret/main'}" /> </picture>
+ <div class="c-landing__header-text">
+  <h2 class="c-landing__header-title">Esmorzaret</h2>
+  <div class="c-landing__header-subtitle">{l s="Una breve celebración de la vida"}</div>
+ </div>
+ </header>
+ <section class="c-landing__content c-landing__content--orange c-landing__content--fullwidth">
+  <div class="c-landing__block">
+   <div class="c-landing__block-img c-landing__block-img--force-top"><img src="{core_getimage filename='esmorzaret-03.png' ambit='editorial/esmorzaret/main'}" /></div>
+   <div class="c-landing__block-text c-landing__block-text--force-bottom c-landing__block-text--light">
+	<p>{l s="Un homenaje slow y mediterráneo a la tradición valenciana"}</p>
+	<img src="{core_getimage filename='esmorzaret-lemon.png' ambit='editorial/esmorzaret/main'}" /></div>
+  </div>
+ </section>
+ <section class="c-landing__content">
+  <div class="c-landing__block"><a href="{$coreLink-&gt;getProductLink(7368)}" class="c-landing__link">
+   <div class="c-landing__card"><img src="{core_getimage filename='esmorzaret-04.png' ambit='editorial/esmorzaret/main'}" />
+	<div class="c-landing__img-text c-landing__img-text--right"><span>{l s="Thera Retro"}</span> <svg class="o-icon o-icon-arrow-right c-landing__arrow"> {core_get_svg icon="symbol-defs.svg#icon-arrow-right"} </svg></div>
+   </div>
+   </a></div>
+ </section>
+
+ <section class="c-landing__content c-landing__content--two-columns c-landing__content--no-margin">
+  <div class="c-landing__block"><img src="{core_getimage filename='esmorzaret-05.png' ambit='editorial/esmorzaret/main'}" /></div>
+  <div class="c-landing__block c-landing__block--vertical-images"><a href="{$coreLink-&gt;getProductLink(10843)}" class="c-landing__link">
+   <div class="c-landing__card"><img src="{core_getimage filename='esmorzaret-06.png' ambit='editorial/esmorzaret/main'}" />
+	<div class="c-landing__img-text"><span>{l s="Fryer Air"}</span> <svg class="o-icon o-icon-arrow-right c-landing__arrow"> {core_get_svg icon="symbol-defs.svg#icon-arrow-right"} </svg></div>
+   </div>
+   </a> <a href="{$coreLink-&gt;getProductLink(43637)}" class="c-landing__link">
+   <div class="c-landing__card"><img src="{core_getimage filename='esmorzaret-07.png' ambit='editorial/esmorzaret/main'}" />
+	<div class="c-landing__img-text"><span>{l s="Stone 3 en 1"}</span> <svg class="o-icon o-icon-arrow-right c-landing__arrow"> {core_get_svg icon="symbol-defs.svg#icon-arrow-right"} </svg></div>
+   </div>
+   </a></div>
+ </section>
+
+ <section class="c-landing__content c-landing__content--pepper"><img src="{core_getimage filename='esmorzaret-pepper.png' ambit='editorial/esmorzaret/main'}" /></section>
+
+<!-- MAQUETACION SOFIA -->
+ <style>
+         .c-landing__content--force-left{
+             margin-left: -200 ;
+         }
+         .c-landing__content--orange-light{
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+             background-color: #FFF7F2;
+         }
+       
+        c-landing__block-text--align{
+            text-align: left;
+            
+        }
+          @media (min-width: 768px) {
+            .c-landing__content--force-left{
+             margin-left: 0;
+         }
+          /* .c-landing__content--orange-light{
+             display: flex;
+             flex-direction: row;
+             background-color: #FFF7F2;
+             justify-content: space-evenly;
+         }  */
+
+        .c-landing__block-img--force-bottom {
+            margin-bottom: -100px;
+        }
+        .c-landing__block-img--space{
+            gap: 30px;}
+        }
+     </style>
+ <section class="c-landing__content c-landing__content--orange-light  c-landing__content--fullwidth c-landing__content--force-left" >
+    
+    <!-- <div class="c-landing__block"><p>{l s="Porque no hay nada mejor que deleitarse con una buena comida."}</p></div> -->
+    <div class="c-landing__block c-landing__block-text c-landing__block-text--force-bottom "><p c-landing__block-text--align>Porque no hay nada mejor que deleitarse con una buena comida.</p></div>
+    <div class="c-landing__block c-landing__block-img--force-top c-landing__block-img--space">
+                <img src="https://www.create-store.com/img/core/ikh/home/2022/CB-bestsellers/20220322-image-03.jpg?v=1647947078" />
+
+     <a href="{$coreLink-&gt;getProductLink(69457)}" class="c-landing__link ">
+         <div class=" c-landing__card c-landing__block-img--force-bottom ">
+             <img src="https://www.create-store.com/img/core/ikh/home/2022/CB-bestsellers/20220322-image-03.jpg?v=1647947078" />
+            <div class="c-landing__img-text c-landing__img-text--right ">
+                <span>{l s="Toast Retro"}</span> 
+                <svg class="o-icon o-icon-arrow-right c-landing__arrow"> {core_get_svg icon="symbol-defs.svg#icon-arrow-right"} </svg>
+            </div>
+         </div>
+     </a>
+    
+    </div>
+   </section>
+
+<!-- FIN MAQUETACION SOFIA -->
+
+
+ <section class="c-landing__content">
+  <div class="c-landing__block"><a href="{$coreLink-&gt;getProductLink(69420)}" class="c-landing__link">
+   <div class="c-landing__card"><img src="{core_getimage filename='esmorzaret-10.png' ambit='editorial/esmorzaret/main'}" />
+	<div class="c-landing__img-text c-landing__img-text--right"><span>{l s="Kettle Retro"}</span> <svg class="o-icon o-icon-arrow-right c-landing__arrow"> {core_get_svg icon="symbol-defs.svg#icon-arrow-right"} </svg></div>
+   </div>
+   </a></div>
+ </section>
+
+ <section class="c-landing__content c-landing__content--no-align u-flex-column@sm--down">
+  <div class="c-landing__block"><a href="{$coreLink-&gt;getProductLink(7702)}" class="c-landing__link">
+   <div class="c-landing__card"><img src="{core_getimage filename='esmorzaret-11.png' ambit='editorial/esmorzaret/main'}" />
+	<div class="c-landing__img-text c-landing__img-text--right"><span>{l s="Juicer Easy"}</span> <svg class="o-icon o-icon-arrow-right c-landing__arrow"> {core_get_svg icon="symbol-defs.svg#icon-arrow-right"} </svg></div>
+   </div>
+   </a></div>
+  <div class="c-landing__block"><img src="{core_getimage filename='esmorzaret-12.png' ambit='editorial/esmorzaret/main'}" /></div>
+ </section>
+ <section class="c-landing__content c-landing__content--no-margin u-flex-column">
+  <div class="c-landing__block"><a href="{$coreLink-&gt;getProductLink(60645)}" class="c-landing__link">
+   <div class="c-landing__card"><img src="{core_getimage filename='esmorzaret-13.png' ambit='editorial/esmorzaret/main'}" />
+	<div class="c-landing__img-text c-landing__img-text--right"><span>{l s="Pot Studio"}</span> <svg class="o-icon o-icon-arrow-right c-landing__arrow"> {core_get_svg icon="symbol-defs.svg#icon-arrow-right"} </svg></div>
+   </div>
+   </a></div>
+  <div class="c-landing__block c-landing__block--orange"><img class="" src="{core_getimage filename='esmorzaret-orange.png' ambit='editorial/esmorzaret/main'}" /></div>
+  <div class="c-landing__block"><img class="c-landing__block-img--margin" src="{core_getimage filename='esmorzaret-14.png' ambit='editorial/esmorzaret/main'}" /></div>
+  <div class="c-landing__block--only-text">
+   <p>{l s="Una breve celebración de la vida"}</p>
+  </div>
+  <div class="c-landing__block"><img src="{core_getimage filename='esmorzaret-15.png' ambit='editorial/esmorzaret/main'}" /></div>
+ </section>
+ <footer class="c-landing__footer">
+  <div class="c-landing__footer-content">
+   <div class="c-landing__footer-title u-text-uppercase">{l s="Productos destacados"}</div>
+   <div class="c-landing__footer-links">
+	<div class="c-landing__footer-link"><a href="{$coreLink-&gt;getProductLink(69420)}" title="" class="">
+	 <div class="c-landing__footer-container">
+	  <p class="c-landing__footer-link-title">Kettle Retro</p>
+	  <span><svg class="o-icon o-icon-arrow-right c-landing__arrow c-landing__footer-arrow"> {core_get_svg icon="symbol-defs.svg#icon-arrow-right"} </svg></span></div>
+	 <p class="c-landing__footer-link-subtitle">{l s="Hervidor de agua electrico"}</p>
+	 </a></div>
+	<div class="c-landing__footer-link"><a href="{$coreLink-&gt;getProductLink(7702)}" title="" class="">
+	 <div class="c-landing__footer-container">
+	  <p class="c-landing__footer-link-title">Juicer Easy</p>
+	  <span><svg class="o-icon o-icon-arrow-right c-landing__arrow c-landing__footer-arrow"> {core_get_svg icon="symbol-defs.svg#icon-arrow-right"} </svg></span></div>
+	 <p class="c-landing__footer-link-subtitle">{l s="Exprimidor eléctrico de cítricos"}</p>
+	 </a></div>
+	<div class="c-landing__footer-link"><a href="{$coreLink-&gt;getProductLink(69457)}" title="" class="">
+	 <div class="c-landing__footer-container">
+	  <p class="c-landing__footer-link-title">Toast Retro</p>
+	  <span><svg class="o-icon o-icon-arrow-right c-landing__arrow c-landing__footer-arrow"> {core_get_svg icon="symbol-defs.svg#icon-arrow-right"} </svg></span></div>
+	 <p class="c-landing__footer-link-subtitle">{l s="Tostadora para rebanadas anchas"}</p>
+	 </a></div>
+	<div class="c-landing__footer-link"><a href="{$coreLink-&gt;getProductLink(7368)}" title="" class="">
+	 <div class="c-landing__footer-container">
+	  <p class="c-landing__footer-link-title">Thera Retro</p>
+	  <span><svg class="o-icon o-icon-arrow-right c-landing__arrow c-landing__footer-arrow"> {core_get_svg icon="symbol-defs.svg#icon-arrow-right"} </svg></span></div>
+	 <p class="c-landing__footer-link-subtitle">{l s="Cafetera Express"}</p>
+	 </a></div>
+	<div class="c-landing__footer-link"><a href="{$coreLink-&gt;getProductLink(10843)}" title="" class="">
+	 <p class="c-landing__footer-link-title"></p>
+	 <div class="c-landing__footer-container">
+	  <p class="c-landing__footer-link-title">Fryer Air</p>
+	  <span><svg class="o-icon o-icon-arrow-right c-landing__arrow c-landing__footer-arrow"> {core_get_svg icon="symbol-defs.svg#icon-arrow-right"} </svg></span></div>
+	 <p class="c-landing__footer-link-subtitle">{l s="Freidora sin aceite 1,5L"}</p>
+	 </a></div>
+	<div class="c-landing__footer-link"><a href="{$coreLink-&gt;getProductLink(60645)}" title="" class="">
+	 <div class="c-landing__footer-container">
+	  <p class="c-landing__footer-link-title">Pot Studio</p>
+	  <span><svg class="o-icon o-icon-arrow-right c-landing__arrow c-landing__footer-arrow"> {core_get_svg icon="symbol-defs.svg#icon-arrow-right"} </svg></span></div>
+	 <p class="c-landing__footer-link-title"></p>
+	 <p class="c-landing__footer-link-subtitle">{l s="Cacerola de aluminio fundido y asas de baquelita"}</p>
+	 </a></div>
+   </div>
+  </div>
+ </footer></div>
